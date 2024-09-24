@@ -5,8 +5,11 @@ name = "pypi"
 
 [packages]
 python-keycloak = "*"
+python-decouple = "*"
 
 [dev-packages]
+black = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.12"

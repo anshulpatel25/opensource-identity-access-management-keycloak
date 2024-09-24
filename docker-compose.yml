@@ -14,7 +14,7 @@ services:
 
   oidc-sandbox:
     build:
-      context: ./app
+      context: ./frontend
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
