@@ -3,6 +3,7 @@ from keycloak.uma_permissions import UMAPermission
 from decouple import config
 import sys
 
+
 def main(access_token: str):
 
     keycloak_open_id_connection = keycloak.KeycloakOpenIDConnection(
@@ -34,6 +35,6 @@ def main(access_token: str):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-      main(sys.argv[1])
+        main(sys.argv[1])
     else:
-      print("Usage: python backend.py <access_token>")
+        print("Usage: python backend.py <access_token>")

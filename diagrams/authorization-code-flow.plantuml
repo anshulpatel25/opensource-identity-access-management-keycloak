@@ -1,0 +1,8 @@
+@startuml
+User <- Application: 1) Redirect to Keycloak
+User -> Keycloak: 2) Send request to Keycloak
+User <-> Keycloak: 3) Authenticate User
+Application <- Keycloak: 4) Authorization code
+Application <-> Keycloak: 5) Exchange authorization token for access token
+Application -> Service: 6) Invoke resource
+@enduml
