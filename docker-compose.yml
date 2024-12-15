@@ -8,7 +8,7 @@ services:
       - KEYCLOAK_ADMIN_PASSWORD=admin
     command: start-dev
     volumes:
-      - ./keycloak-db:/opt/keycloak/data
+      - keycloak-data:/opt/keycloak/data
     ports:
       - "8080:8080"
 
@@ -18,3 +18,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
+
+volumes:
+  keycloak-data:

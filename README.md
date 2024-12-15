@@ -1,7 +1,7 @@
 
 # OpenID Connect Playground
 
-This repository contains a simple OpenID Connect (OIDC) playground application, demonstrating the authorization flow using Keycloak as the identity provider. It is prepared for [CNCF Ahmedabad Meetup #13](https://community.cncf.io/events/details/cncf-ahmedabad-presents-cncf-ahmedabad-meetup-13/)
+This repository contains a simple OpenID Connect (OIDC) playground application, demonstrating the authorization flow using Keycloak as the identity provider. It is prepared for [CNCF Ahmedabad Meetup](https://community.cncf.io/events/details/cncf-cloud-native-ahmedabad-presents-cncf-ahmedabad-meetup-kubecon-india-recap/)
 
 ## Overview
 
@@ -15,14 +15,7 @@ The application consists of two main components:
 To run the application, follow these steps:
 
 1. Clone the repository and navigate to the project directory.
-2. Create a `.envrc` file in the root directory and add the following environment variables:
-```makefile
-KEYCLOAK_URL=http://localhost:8080
-KEYCLOAK_REALM=meetup
-KEYCLOAK_CLIENT_ID=backend
-KEYCLOAK_CLIENT_SECRET=XXXXXXXX
-```
-3. Bring  the stack up via `docker-compose up -d`
+2. Bring  the stack up via `docker-compose up -d`
 
 ## Usage
 
@@ -44,6 +37,25 @@ KEYCLOAK_CLIENT_SECRET=XXXXXXXX
   - Permissions: finops_permission, sales_permission
   - Users: user1 with finops_role, user2 with sales_role
 - Configure events - Admin, User
+
+## Executing the backend
+
+1. Create a `.envrc` file in the root directory and add the following environment variables:
+
+```bash
+KEYCLOAK_URL=http://localhost:8080
+KEYCLOAK_REALM=meetup
+KEYCLOAK_CLIENT_ID=backend
+KEYCLOAK_CLIENT_SECRET=XXXXXXXX
+```
+2. Create a python virtual environment and install the required packages:
+```bash
+python -m venv env
+source env/bin/activate
+pip install pipenv
+pipenv install
+```
+3. Execute the backend script via `python backend.py`.
 
 ## Presentation
 

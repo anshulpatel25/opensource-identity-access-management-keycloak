@@ -1,0 +1,4 @@
+export KEYCLOAK_URL=http://localhost:8080
+export KEYCLOAK_REALM=meetup
+export KEYCLOAK_CLIENT_ID=backend
+export KEYCLOAK_CLIENT_SECRET=<>
