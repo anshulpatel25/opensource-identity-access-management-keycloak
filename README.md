@@ -36,6 +36,7 @@ To run the application, follow these steps:
   - Policy: finops_policy, sales_policy
   - Permissions: finops_permission, sales_permission
   - Users: user1 with finops_role, user2 with sales_role
+- Configure scopes
 - Configure events - Admin, User
 
 ## Executing the backend
